@@ -1,0 +1,922 @@
+[
+    {
+        "name": "Alien Cranium",
+        "number": 597,
+        "id": 1
+    },
+    {
+        "name": "Altruist's Adornment",
+        "number": 682,
+        "id": 2
+    },
+    {
+        "name": "Anger",
+        "number": 170,
+        "id": 3
+    },
+    {
+        "name": "Ap-Sap",
+        "number": 151,
+        "id": 4
+    },
+    {
+        "name": "Aperture Labs Hard Hat",
+        "number": 130,
+        "id": 5
+    },
+    {
+        "name": "Apoco-Fists",
+        "number": 262,
+        "id": 6
+    },
+    {
+        "name": "Archimedes",
+        "number": 669,
+        "id": 7
+    },
+    {
+        "name": "Area 451",
+        "number": 369,
+        "id": 8
+    },
+    {
+        "name": "Arkham Cowl",
+        "number": 546,
+        "id": 9
+    },
+    {
+        "name": "Asymmetric Accolade",
+        "number": 830,
+        "id": 10
+    },
+    {
+        "name": "Atomic Accolade",
+        "number": 970,
+        "id": 11
+    },
+    {
+        "name": "Audio File",
+        "number": 373,
+        "id": 12
+    },
+    {
+        "name": "Auspicious Automaton Assembler's Accolade",
+        "number": 551,
+        "id": 13
+    },
+    {
+        "name": "Awesomenauts Badge",
+        "number": 949,
+        "id": 14
+    },
+    {
+        "name": "AWPer Hand",
+        "number": 966,
+        "id": 15
+    },
+    {
+        "name": "Backbiter's Billycock",
+        "number": 550,
+        "id": 16
+    },
+    {
+        "name": "Ball-Kicking Boots",
+        "number": 609,
+        "id": 17
+    },
+    {
+        "name": "Balloonicorn",
+        "number": 912,
+        "id": 18
+    },
+    {
+        "name": "Baronial Badge",
+        "number": 180,
+        "id": 19
+    },
+    {
+        "name": "Battle Bob",
+        "number": 439,
+        "id": 20
+    },
+    {
+        "name": "Beastly Bonnet",
+        "number": 167,
+        "id": 21
+    },
+    {
+        "name": "Big Daddy",
+        "number": 738,
+        "id": 22
+    },
+    {
+        "name": "Biomech Backpack",
+        "number": 277,
+        "id": 23
+    },
+    {
+        "name": "Blind Justice",
+        "number": 479,
+        "id": 24
+    },
+    {
+        "name": "Boiling Point",
+        "number": 653,
+        "id": 25
+    },
+    {
+        "name": "Bolgan",
+        "number": 405,
+        "id": 26
+    },
+    {
+        "name": "Bolgan Family Crest",
+        "number": 90,
+        "id": 27
+    },
+    {
+        "name": "Bonk Helm",
+        "number": 623,
+        "id": 28
+    },
+    {
+        "name": "Brain Bucket",
+        "number": 863,
+        "id": 29
+    },
+    {
+        "name": "Brigade Helm",
+        "number": 498,
+        "id": 30
+    },
+    {
+        "name": "Brimstone",
+        "number": 22,
+        "id": 31
+    },
+    {
+        "name": "Br\u00fctal Bouffant",
+        "number": 725,
+        "id": 32
+    },
+    {
+        "name": "Buck Turner All-Stars",
+        "number": 991,
+        "id": 33
+    },
+    {
+        "name": "Bushman's Boonie",
+        "number": 818,
+        "id": 34
+    },
+    {
+        "name": "Camera Beard",
+        "number": 258,
+        "id": 35
+    },
+    {
+        "name": "Centurion",
+        "number": 791,
+        "id": 36
+    },
+    {
+        "name": "Champ Stamp",
+        "number": 923,
+        "id": 37
+    },
+    {
+        "name": "Cheet Sheet",
+        "number": 298,
+        "id": 38
+    },
+    {
+        "name": "Chief Constable",
+        "number": 910,
+        "id": 39
+    },
+    {
+        "name": "Cockfighter",
+        "number": 18,
+        "id": 40
+    },
+    {
+        "name": "Cold War Luchador",
+        "number": 582,
+        "id": 41
+    },
+    {
+        "name": "Combat Medic's Crusher Cap",
+        "number": 885,
+        "id": 42
+    },
+    {
+        "name": "Companion Cube Pin",
+        "number": 156,
+        "id": 43
+    },
+    {
+        "name": "Company Man",
+        "number": 534,
+        "id": 44
+    },
+    {
+        "name": "Concheror",
+        "number": 362,
+        "id": 45
+    },
+    {
+        "name": "Conjurer's Cowl",
+        "number": 957,
+        "id": 46
+    },
+    {
+        "name": "Conniver's Kunai",
+        "number": 103,
+        "id": 47
+    },
+    {
+        "name": "Conspiracy Cap",
+        "number": 564,
+        "id": 48
+    },
+    {
+        "name": "Crafty Hair",
+        "number": 649,
+        "id": 49
+    },
+    {
+        "name": "Criminal Cloak",
+        "number": 531,
+        "id": 50
+    },
+    {
+        "name": "Croft's Crest",
+        "number": 681,
+        "id": 51
+    },
+    {
+        "name": "Cross-Comm Crash Helmet",
+        "number": 354,
+        "id": 52
+    },
+    {
+        "name": "Cross-Comm Express",
+        "number": 462,
+        "id": 53
+    },
+    {
+        "name": "Crosslinker's Coil",
+        "number": 756,
+        "id": 54
+    },
+    {
+        "name": "Crown of the Old Kingdom",
+        "number": 776,
+        "id": 55
+    },
+    {
+        "name": "Dadliest Catch",
+        "number": 692,
+        "id": 56
+    },
+    {
+        "name": "Dashin' Hashshashin",
+        "number": 346,
+        "id": 57
+    },
+    {
+        "name": "Dead Cone",
+        "number": 248,
+        "id": 58
+    },
+    {
+        "name": "Deadliest Duckling",
+        "number": 419,
+        "id": 59
+    },
+    {
+        "name": "Der Maschinensoldaten-Helm",
+        "number": 199,
+        "id": 60
+    },
+    {
+        "name": "Deus Specs",
+        "number": 208,
+        "id": 61
+    },
+    {
+        "name": "Diamondback",
+        "number": 12,
+        "id": 62
+    },
+    {
+        "name": "Die Regime-Panzerung",
+        "number": 507,
+        "id": 63
+    },
+    {
+        "name": "Distinguished Rogue",
+        "number": 173,
+        "id": 64
+    },
+    {
+        "name": "Doe-Boy",
+        "number": 541,
+        "id": 65
+    },
+    {
+        "name": "Doublecross-Comm",
+        "number": 68,
+        "id": 66
+    },
+    {
+        "name": "Dragonborn Helmet",
+        "number": 921,
+        "id": 67
+    },
+    {
+        "name": "Dread Hiding Hood",
+        "number": 204,
+        "id": 68
+    },
+    {
+        "name": "Dread Knot",
+        "number": 668,
+        "id": 69
+    },
+    {
+        "name": "El Jefe",
+        "number": 56,
+        "id": 70
+    },
+    {
+        "name": "Engineer's Cap",
+        "number": 335,
+        "id": 71
+    },
+    {
+        "name": "Faerie Solitaire Pin",
+        "number": 59,
+        "id": 72
+    },
+    {
+        "name": "Fan O'War",
+        "number": 459,
+        "id": 73
+    },
+    {
+        "name": "Fear Monger",
+        "number": 529,
+        "id": 74
+    },
+    {
+        "name": "Firefly",
+        "number": 366,
+        "id": 75
+    },
+    {
+        "name": "First American",
+        "number": 189,
+        "id": 76
+    },
+    {
+        "name": "Flying Guillotine",
+        "number": 147,
+        "id": 77
+    },
+    {
+        "name": "Foppish Physician",
+        "number": 818,
+        "id": 78
+    },
+    {
+        "name": "Fortified Compound",
+        "number": 682,
+        "id": 79
+    },
+    {
+        "name": "Fortune Hunter",
+        "number": 579,
+        "id": 80
+    },
+    {
+        "name": "Freedom Staff",
+        "number": 664,
+        "id": 81
+    },
+    {
+        "name": "Friends Forever Companion Square Badge",
+        "number": 304,
+        "id": 82
+    },
+    {
+        "name": "Geisha Boy",
+        "number": 556,
+        "id": 83
+    },
+    {
+        "name": "Gilded Guard",
+        "number": 849,
+        "id": 84
+    },
+    {
+        "name": "Glengarry Bonnet",
+        "number": 268,
+        "id": 85
+    },
+    {
+        "name": "Grandmaster",
+        "number": 93,
+        "id": 86
+    },
+    {
+        "name": "Grizzled Growth",
+        "number": 571,
+        "id": 87
+    },
+    {
+        "name": "Half-Zatoichi",
+        "number": 923,
+        "id": 88
+    },
+    {
+        "name": "Ham Shank",
+        "number": 397,
+        "id": 89
+    },
+    {
+        "name": "Hardy Laurel",
+        "number": 62,
+        "id": 90
+    },
+    {
+        "name": "Heavy Artillery Officer's Cap",
+        "number": 718,
+        "id": 91
+    },
+    {
+        "name": "Hero's Hachimaki",
+        "number": 476,
+        "id": 92
+    },
+    {
+        "name": "Hero's Tail",
+        "number": 408,
+        "id": 93
+    },
+    {
+        "name": "Heroic Companion Badge",
+        "number": 901,
+        "id": 94
+    },
+    {
+        "name": "Hetman's Headpiece",
+        "number": 344,
+        "id": 95
+    },
+    {
+        "name": "Hitt Mann Badge",
+        "number": 915,
+        "id": 96
+    },
+    {
+        "name": "Horace",
+        "number": 841,
+        "id": 97
+    },
+    {
+        "name": "Human Cannonball",
+        "number": 970,
+        "id": 98
+    },
+    {
+        "name": "Huo-Long Heater",
+        "number": 311,
+        "id": 99
+    },
+    {
+        "name": "InfoShow TF2 Tournament Participant",
+        "number": 802,
+        "id": 100
+    },
+    {
+        "name": "Janissary Ketche",
+        "number": 384,
+        "id": 101
+    },
+    {
+        "name": "Jungle Booty",
+        "number": 959,
+        "id": 102
+    },
+    {
+        "name": "K-9 Mane",
+        "number": 932,
+        "id": 103
+    },
+    {
+        "name": "Killer Exclusive",
+        "number": 304,
+        "id": 104
+    },
+    {
+        "name": "King of Scotland Cape",
+        "number": 913,
+        "id": 105
+    },
+    {
+        "name": "Lacking Moral Fiber Mask",
+        "number": 897,
+        "id": 106
+    },
+    {
+        "name": "Last Straw",
+        "number": 518,
+        "id": 107
+    },
+    {
+        "name": "Little Bear",
+        "number": 349,
+        "id": 108
+    },
+    {
+        "name": "Lone Star",
+        "number": 366,
+        "id": 109
+    },
+    {
+        "name": "Machina",
+        "number": 774,
+        "id": 110
+    },
+    {
+        "name": "Map Maker's Medallion",
+        "number": 352,
+        "id": 111
+    },
+    {
+        "name": "Mappers vs. Machines Participant Medal 2017",
+        "number": 758,
+        "id": 112
+    },
+    {
+        "name": "Mark of the Saint",
+        "number": 642,
+        "id": 113
+    },
+    {
+        "name": "Marxman",
+        "number": 721,
+        "id": 114
+    },
+    {
+        "name": "Mask of the Shaman",
+        "number": 433,
+        "id": 115
+    },
+    {
+        "name": "Master's Yellow Belt",
+        "number": 65,
+        "id": 116
+    },
+    {
+        "name": "Maul",
+        "number": 506,
+        "id": 117
+    },
+    {
+        "name": "Menpo",
+        "number": 324,
+        "id": 118
+    },
+    {
+        "name": "Merc Medal",
+        "number": 99,
+        "id": 119
+    },
+    {
+        "name": "Merc's Pride Scarf",
+        "number": 727,
+        "id": 120
+    },
+    {
+        "name": "Mister Bubbles",
+        "number": 377,
+        "id": 121
+    },
+    {
+        "name": "MK 50",
+        "number": 788,
+        "id": 122
+    },
+    {
+        "name": "Nabler",
+        "number": 747,
+        "id": 123
+    },
+    {
+        "name": "Nanobalaclava",
+        "number": 253,
+        "id": 124
+    },
+    {
+        "name": "Neon Annihilator",
+        "number": 689,
+        "id": 125
+    },
+    {
+        "name": "Noh Mercy",
+        "number": 480,
+        "id": 126
+    },
+    {
+        "name": "Noise Maker",
+        "number": 643,
+        "id": 127
+    },
+    {
+        "name": "Nostromo Napalmer",
+        "number": 806,
+        "id": 128
+    },
+    {
+        "name": "Officer's Ushanka",
+        "number": 13,
+        "id": 129
+    },
+    {
+        "name": "Original",
+        "number": 333,
+        "id": 130
+    },
+    {
+        "name": "Otolaryngologist's Mirror",
+        "number": 859,
+        "id": 131
+    },
+    {
+        "name": "Person in the Iron Mask",
+        "number": 559,
+        "id": 132
+    },
+    {
+        "name": "Philanthropist's Indulgence",
+        "number": 600,
+        "id": 133
+    },
+    {
+        "name": "Pilotka",
+        "number": 50,
+        "id": 134
+    },
+    {
+        "name": "Pip-Boy",
+        "number": 765,
+        "id": 135
+    },
+    {
+        "name": "Planeswalker Goggles",
+        "number": 739,
+        "id": 136
+    },
+    {
+        "name": "Planeswalker Helm",
+        "number": 971,
+        "id": 137
+    },
+    {
+        "name": "Point and Shoot",
+        "number": 47,
+        "id": 138
+    },
+    {
+        "name": "Potato of Labor",
+        "number": 993,
+        "id": 139
+    },
+    {
+        "name": "Pounding Father",
+        "number": 396,
+        "id": 140
+    },
+    {
+        "name": "Prinny Hat",
+        "number": 956,
+        "id": 141
+    },
+    {
+        "name": "Prinny Machete",
+        "number": 547,
+        "id": 142
+    },
+    {
+        "name": "Prinny Pouch",
+        "number": 216,
+        "id": 143
+    },
+    {
+        "name": "Prize Plushy",
+        "number": 179,
+        "id": 144
+    },
+    {
+        "name": "Professional's Panama",
+        "number": 152,
+        "id": 145
+    },
+    {
+        "name": "Professor's Pineapple",
+        "number": 11,
+        "id": 146
+    },
+    {
+        "name": "Public Accessor",
+        "number": 274,
+        "id": 147
+    },
+    {
+        "name": "Purity Fist",
+        "number": 59,
+        "id": 148
+    },
+    {
+        "name": "Quadwrangler",
+        "number": 68,
+        "id": 149
+    },
+    {
+        "name": "Qu\u00e4ckenbirdt",
+        "number": 65,
+        "id": 150
+    },
+    {
+        "name": "Red-Tape Recorder",
+        "number": 550,
+        "id": 151
+    },
+    {
+        "name": "Respectless Rubber Glove",
+        "number": 933,
+        "id": 152
+    },
+    {
+        "name": "Righteous Bison",
+        "number": 462,
+        "id": 153
+    },
+    {
+        "name": "Robo-Sandvich",
+        "number": 957,
+        "id": 154
+    },
+    {
+        "name": "Robot Chicken Hat",
+        "number": 40,
+        "id": 155
+    },
+    {
+        "name": "Russian Rocketeer",
+        "number": 143,
+        "id": 156
+    },
+    {
+        "name": "Samur-Eye",
+        "number": 682,
+        "id": 157
+    },
+    {
+        "name": "Scotsman's Stove Pipe",
+        "number": 539,
+        "id": 158
+    },
+    {
+        "name": "Scrap Pack",
+        "number": 21,
+        "id": 159
+    },
+    {
+        "name": "Sharp Dresser",
+        "number": 834,
+        "id": 160
+    },
+    {
+        "name": "Sharpened Volcano Fragment",
+        "number": 160,
+        "id": 161
+    },
+    {
+        "name": "Short Circuit",
+        "number": 855,
+        "id": 162
+    },
+    {
+        "name": "Shred Alert",
+        "number": 696,
+        "id": 163
+    },
+    {
+        "name": "Siberian Sophisticate",
+        "number": 276,
+        "id": 164
+    },
+    {
+        "name": "Sign of the Wolf's School",
+        "number": 553,
+        "id": 165
+    },
+    {
+        "name": "Spycrab",
+        "number": 166,
+        "id": 166
+    },
+    {
+        "name": "Stahlhelm",
+        "number": 187,
+        "id": 167
+    },
+    {
+        "name": "Stainless Pot",
+        "number": 390,
+        "id": 168
+    },
+    {
+        "name": "Steel Sixpack",
+        "number": 987,
+        "id": 169
+    },
+    {
+        "name": "Steel Songbird",
+        "number": 251,
+        "id": 170
+    },
+    {
+        "name": "Stovepipe Sniper Shako",
+        "number": 796,
+        "id": 171
+    },
+    {
+        "name": "Sun-on-a-Stick",
+        "number": 600,
+        "id": 172
+    },
+    {
+        "name": "Supreme Strategist's Sigil of Status",
+        "number": 169,
+        "id": 173
+    },
+    {
+        "name": "Sydney Straw Boat",
+        "number": 773,
+        "id": 174
+    },
+    {
+        "name": "Tartan Shade",
+        "number": 604,
+        "id": 175
+    },
+    {
+        "name": "Tartantaloons",
+        "number": 970,
+        "id": 176
+    },
+    {
+        "name": "Texas Ten Gallon",
+        "number": 271,
+        "id": 177
+    },
+    {
+        "name": "TF2VRH",
+        "number": 407,
+        "id": 178
+    },
+    {
+        "name": "That '70s Chapeau",
+        "number": 118,
+        "id": 179
+    },
+    {
+        "name": "Three-Rune Blade",
+        "number": 564,
+        "id": 180
+    },
+    {
+        "name": "Tomb Readers",
+        "number": 41,
+        "id": 181
+    },
+    {
+        "name": "Tomb Wrapper",
+        "number": 687,
+        "id": 182
+    },
+    {
+        "name": "Top Notch",
+        "number": 874,
+        "id": 183
+    },
+    {
+        "name": "Tough Guy's Toque",
+        "number": 948,
+        "id": 184
+    }
+]
