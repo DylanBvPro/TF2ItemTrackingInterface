@@ -15,5 +15,50 @@
       {
         "name": "Ap-Sap"
       }
+    ],
+
+    "userSection": [
+      {
+        "name": "Ap-Sap",
+        "number": 1,
+        "bought": 9.00
+      },
+      {
+        "name": "Companion Cube Pin",
+        "number": 3,
+        "bought": 15.21
+      },
+      {
+        "name": "AWPer Hand",
+        "number": 1,
+        "bought": 2.73
+      },
+      {
+        "name": "Red-Tape Recorder",
+        "number": 1,
+        "bought": 2.41
+      },
+      {
+        "name": "Archimedes",
+        "number": 1,
+        "bought": 1.47
+      }
+    ],
+    "trendingSection": [
+      {
+        "name": "Fan O'War"
+      },
+      {
+        "name": "Engineer's Cap"
+      },
+      {
+        "name": "Original"
+      },
+      {
+        "name": "Sun-on-a-Stick"
+      },
+      {
+        "name": "Ap-Sap"
+      }
     ]
   }

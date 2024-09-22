@@ -52,31 +52,45 @@
        <!--...-->
        <h1 class="titleContainer">Favorite Items</h1>
        <div class = "boxRow" id = "favorite">
-       <div class = "boxType" id = "boxfavoriteID">
-        <div class = "itemBoxQuaintity" id = "itemQuaintityID"></div>
-        <div class = "itemBoxPicture" id = "itemPictureID"></div>
-        <div class = "itemBoxName" id = "itemBoxID"></div>
-        <div class = "itemBoxPrice" id = "itemPriceID"></div>
-      </div>
+        {#each faitems as item, index}
+        <div class="boxType" id={`boxTrendingID${index + 1}`}>
+          <div class="itemBoxQuantity" id={`itemQuantityID${index + 1}`}>{item.number}</div>
+          <div class="itemBoxPicture" id={`itemPictureID${index + 1}`}>
+            <img src={item.pictureID} alt={"broke"} /></div>
+          <div class="itemBoxName" id={`itemBoxID${index + 1}`}>{item.name}</div>
+          <div class="itemBoxPrice" id={`itemPriceID${index + 1}`}>${item.price[item.price.length - 1]}</div>
+        </div>
+      {/each}
     </div>
+    <p></p>
+    <!--...-->
+    <h1 class="titleContainer">Your Items</h1>
+    <div class = "boxRow" id = "user">
+     {#each usitems as item, index}
+     <div class="boxType" id={`boxUserID${index + 1}`}>
+       <div class="itemBoxQuantity" id={`itemQuantityID${index + 1}`}>{item.number}</div>
+       <div class="itemBoxPicture" id={`itemPictureID${index + 1}`}>
+         <img src={item.pictureID} alt={"broke"} /></div>
+       <div class="itemBoxName" id={`itemBoxID${index + 1}`}>{item.name}</div>
+       <div class="itemBoxPrice" id={`itemPriceID${index + 1}`}>${item.bought}</div>
+     </div>
+   {/each}
+ </div>
 
   </div>
 </h1>
-
 <h2>
   <div class="bottomContainer">
     <div id="graphMenu">
     </div>
     <div id="addItems">
-      <button class="add-item-button">Add Items</button>
+      <button on:click={() => (showModal = true)} class="add-item-button">Add Items</button>
     </div>
   </div>
 </h2>
 
-<button on:click={() => (showModal = true)}> show modal </button>
 
 <Modal bind:showModal>
-
   <h2 slot="header">
     Modal
     <small><em>adjective</em> mod·al \ˈmō-dəl\</small>
@@ -85,8 +99,6 @@
   <div>
     <img id="itemImage" src="src/lib/assets/default.png" alt="Default Image" width="200" />
   </div>
-  
-  <!-- <svelte:window on:keydown={navigateList} /> -->
   
   <label for="itemAdd">Enter the item you want to track:</label>
   
@@ -122,10 +134,14 @@
            required>
   </form>
   
+  <div class="modal-footer">
+    <button class="submit-button" on:click={submitValue}>Submit</button>
+    <button class="close-button" on:click={() => showModal = false}>Close</button>
+  </div>
+
   <a href="https://www.merriam-webster.com/dictionary/modal" target="_blank">
     Merriam-Webster: Definition of Modal
   </a>
-
 </Modal>
 
 
@@ -133,83 +149,39 @@
 
 
 <script>
-//   document.addEventListener('DOMContentLoaded', function() {
-//       function checkAndSetDefaultText() {
-//           // Object containing default texts for each pattern
-//           var defaultTexts = {
-//               'itemQuaintityID': '0',
-//               'itemPictureID': 'src/lib/assets/default.png',
-//               'itemBoxID': '#####',
-//               'itemPriceID': '$0.00'
-//           };
-  
-//  //         var defaultImage = "src/lib/assets/default.png";
 
-//  //         var itemPictureID = document.getElementById("itemPictureID");
-//  //       itemPictureID.innerHTML = `<img src="${defaultImage}" alt="Default Image" />`;
+  let inputSubmitValue = '';
+  let price = 0;
 
-// //        itemPictureID.classList.add('itemBoxPicture');
+  const submitValue = () => {
+    // Validate the form inputs
+    if (!inputValue) {
+        alert('Please fill in all fields correctly.');
+        return;
+    }
 
-//           // Array of ID patterns to check
-//           var idPatterns = Object.keys(defaultTexts);
-  
-//           idPatterns.forEach(function(pattern) {
-//               // Get all elements with IDs containing the pattern
-//               var elements = document.querySelectorAll('[id*="' + pattern + '"]');
-  
-//               elements.forEach(function(el) {
-//                   // Check if the ID ends with .#
-//                   var id = el.id;
-//                   var regex = new RegExp(pattern + '\\.\\d+$');
-  
-//                   if (!regex.test(id)) {
-//                       // If the ID doesn't end with .#, set the default text
-//                       el.textContent = defaultTexts[pattern];
-//                   }
-//               });
-//           });
-//       }
-  
-//       // Call the function to check IDs and set default text
-//       checkAndSetDefaultText();
-//   });
+    // Log the values for now (you can replace this with your logic)
+    console.log(`Item Name: ${inputValue}, Price: ${price} is submitted!`);
 
-  /////
+    // Reset the form inputs after submission
+    inputValue = '';
+    price = 0;
 
+    // Optionally, close the modal
+    showModal = false;
 
-      // async function fetchData(file) {
-      //       const response = await fetch(file);
-      //       if (!response.ok) {
-      //           throw new Error('Network response was not ok');
-      //       }
-      //       return await response.json();
-      //   }
+    // Clear the input focus
+    searchInput.focus();
+};
 
-      //   function getRandomEntry(data) {
-      //       const randomIndex = Math.floor(Math.random() * data.length);
-      //       return data[randomIndex];
-      //   }
-
-      //   async function autoFill() {
-      //       try {
-      //           const data = await fetchData('src/lib/data/itemData.json');
-      //           const randomEntry = getRandomEntry(data);
-
-      //           document.getElementById('itemName').value = randomEntry.name;
-      //           document.getElementById('itemValue').value = randomEntry.number;
-
-      //       } catch (error) {
-      //           console.error('Error fetching data:', error);
-      //       }
-      //   }
-
-      //   window.onload = autoFill;
-
-      import { onMount } from 'svelte';
+    import { onMount } from 'svelte';
     import { itemImageMap } from './items.js'; // Adjust the path as necessary
 
     let items = [];
     let reitems = [];
+    let faitems = [];
+    let usitems = [];
+    let chartData = [];
     let lastValue;
 
     async function fetchItemData() {
@@ -228,6 +200,12 @@
         const response = await fetch('src/lib/data/itemCategory.json'); // Path to the recent items JSON
         const data = await response.json();
         return data.recentSection;
+    }
+
+    async function fetchUserItems() {
+        const response = await fetch('src/lib/data/itemCategory.json'); // Path to the recent items JSON
+        const data = await response.json();
+        return data.userSection;
     }
 
     async function displayRandomItems() {
@@ -274,14 +252,38 @@
             }
             return null;
         }).filter(item => item !== null); // Filter out any nulls in case of missing items
+        //console.log(reitems);
     }
 
+    
+    async function displayUserItems() {
+        const allItems = await fetchItemData();
+        const itemValues = await fetchItemValues();
+        const userItems = await fetchUserItems();
+
+        usitems = userItems.map(userItem => {
+            const foundItem = userItems.find(item => item.name === userItem.name);
+            if (foundItem) {
+                return {
+                    ...foundItem,
+                    quantity: userItems[foundItem.number],
+                    price: userItems[foundItem.bought],
+                    pictureID: itemImageMap[foundItem.name] || 'src/lib/assets/defaultImage.png' // Fallback image
+                };
+            }
+            return null;
+        }).filter(item => item !== null); // Filter out any nulls in case of missing items
+        console.log(usitems);
+    }
     onMount(() => {
         displayRandomItems();
         displayRecentItems();
+        displayUserItems();
     });
 
 // Call the function to display random items on page load
+
+
 
   /////
     
@@ -336,14 +338,6 @@ const setInputVal = (countryName) => {
 
 }	
 
-const submitValue = () => {
-	if (inputValue) {
-		console.log(`${inputValue} is submitted!`);
-		setTimeout(clearInput, 1000);
-	} else {
-		alert("You didn't type anything.")
-	}
-}
 
 const makeMatchBold = (str) => {
 	// replace part of (country name === inputValue) with strong tags
@@ -415,6 +409,22 @@ function selectItem(item) {
 
 
 <style>
+
+
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .submit-button {
+    align-self: flex-start; /* Align to bottom left */
+  }
+  
+  .close-button {
+    align-self: flex-end; /* Align to bottom right */
+  }
+
 
 div.autocomplete {
   /*the container must be positioned relative:*/
@@ -572,5 +582,3 @@ font-family:'Arial Black', sans-serif;font-size:2em;font-stretch:normal;text-dec
     margin-top: 10px;
   }
   </style>
-
-  
