@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@tailwindcss/typography": "^0.5.14",
     "autoprefixer": "^10.4.20",
@@ -22,5 +23,9 @@
   "keywords": [
     "echarts",
     "apache"
-  ]
+  ],
+  "dependencies": {
+    "chart.js": "^4.4.4",
+    "svelte-chartjs": "^3.1.5"
+  }
 }

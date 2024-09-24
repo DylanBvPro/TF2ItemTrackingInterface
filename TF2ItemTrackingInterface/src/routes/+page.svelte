@@ -1,28 +1,117 @@
+
 <script>
+  //import Chart from './Chart.svelte';
   //import TopAnimation from './topanimation.svelte'; // Adjust the path as needed
   let inputSubmitValue = '';
   let price = 0;
 
-  const submitValue = () => {
-    // Validate the form inputs
-    if (!inputValue || price <= 0) {
-        alert('Please fill in all fields correctly.');
-        return;
-    }
+  import { writable } from 'svelte/store';
 
-    // Log the values for now (you can replace this with your logic)
-    console.log(`Item Name: ${inputValue}, Price: ${price} is submitted!`);
-
-    // Reset the form inputs after submission
-    inputValue = '';
-    price = 0;
-
-    // Optionally, close the modal
-    showModal = false;
-
-    // Clear the input focus
-    searchInput.focus();
+// Initial data structure
+const initialData = {
+    recentSection: [
+        { name: "Fan O'War" },
+        { name: "Engineer's Cap" },
+        { name: "Original" },
+        { name: "Sun-on-a-Stick" },
+        { name: "Ap-Sap" }
+    ],
+    userSection: [
+        { name: "Ap-Sap", number: 1, bought: 9.00 },
+        { name: "Companion Cube Pin", number: 3, bought: 15.21 },
+        { name: "AWPer Hand", number: 1, bought: 2.73 },
+        { name: "Red-Tape Recorder", number: 1, bought: 2.41 },
+        { name: "Archimedes", number: 1, bought: 1.47 }
+    ],
+    trendingSection: [
+        { name: "Fan O'War" },
+        { name: "Engineer's Cap" },
+        { name: "Original" },
+        { name: "Sun-on-a-Stick" },
+        { name: "Ap-Sap" }
+    ]
 };
+
+// Create a writable store
+export const itemStore = writable(initialData);
+  
+  const submitValue = () => {
+        // Validate the form inputs
+        if (!inputValue || price <= 0) {
+            alert('Please fill in all fields correctly.');
+            return;
+        }
+
+        // Create the new item object
+        const newItem = {
+            name: inputValue,
+            price: price,
+        };
+
+        // Retrieve the existing items from local storage
+        let userSection = JSON.parse(localStorage.getItem('itemCategory')) || [];
+
+        // Add the new item to the top of the array
+        userSection.unshift(newItem);
+
+        // Save the updated array back to local storage
+        localStorage.setItem('itemCategory', JSON.stringify(userSection));
+
+        // Log the values for now (you can replace this with your logic)
+        console.log(`Item Name: ${inputValue}, Price: ${price} is submitted!`);
+
+        // Reset the form inputs after submission
+        //inputValue = '';
+        //price = 0;
+
+        // Optionally, close the modal
+        //showModal = false;
+
+        // Clear the input focus
+        //document.getElementById('searchInput').focus();
+
+        addNewItem(inputValue, price);
+
+// Reset form inputs after submission
+inputValue = '';
+price = 0;
+
+// Optionally, close the modal
+showModal = false;
+
+// Clear the input focus
+searchInput.focus();
+
+showModal = false;
+    
+};
+
+async function addNewItem(name, price) {
+
+  const allItems = await fetchItemData();
+  const itemValues = await fetchItemValues();
+
+// Fill the data for existing items in usitems
+
+// Ensure newItem also gets the correct data
+const newItem = {
+        name: name,
+        number: 1, // Incremental number
+        pictureID: itemImageMap[name], // Default for new item
+        goingprice: itemValues[name], // Default price array for new item
+        bought: price, // Set default bought price for new item
+    };
+
+// Add the new item to the array of usitems
+usitems = [...usitems, newItem]; // Spread operator to add newItem at the end of usitems array
+
+// Log the new item's goingprice and the entire newItem object
+console.log(newItem.goingprice);
+console.log(newItem);
+
+}
+
+
 
     import { onMount } from 'svelte';
     import { itemImageMap } from './items.js'; // Adjust the path as necessary
@@ -62,7 +151,7 @@
         const allItems = await fetchItemData();
         const itemValues = await fetchItemValues();
         const randomItems = [];
-        const itemCount = 5; // Change this for more boxes
+        const itemCount = 10; // Change this for more boxes
 
         while (randomItems.length < itemCount) {
             const randomIndex = Math.floor(Math.random() * allItems.length);
@@ -83,8 +172,10 @@
             pictureID: itemImageMap[item.name] || 'src/lib/assets/defaultImage.png' // Fallback image
 
         }));
+        return items; // Return the items array
     }
-
+    export { items };
+    
     async function displayRecentItems() {
         const allItems = await fetchItemData();
         const itemValues = await fetchItemValues();
@@ -130,10 +221,11 @@
         displayRandomItems();
         displayRecentItems();
         displayUserItems();
+        charter(canvas)
+        //fetchUserSectionData();
     });
 
 // Call the function to display random items on page load
-
 
 
   /////
@@ -256,9 +348,13 @@ function selectItem(item) {
 // Add event listener to the input field to trigger filtering
 //itemInput.addEventListener('input', filterItemsImage);
 
+
+import { charter } from './charter.js'; // Adjust path if necessary
+let canvas; // Reference to the canvas element
+
   </script>
 
-<nav>
+<!-- <nav>
     <ul>
         <li>
             <a href="/">Home</a>
@@ -267,7 +363,7 @@ function selectItem(item) {
             <a href="/inventory">Your Inventory</a>
         </li>
     </ul>
-</nav>
+</nav> -->
 
 <body>
 
@@ -281,15 +377,22 @@ function selectItem(item) {
     </div>
   </div>
 
-<div class = toplogo style="text-align: center;">
-  <div class="GeneratedText">TF2 Item Tracker</div>
-  <img src="src\lib\assets\default.png" alt="defaultImage" />
-</div>
-
+ 
 <h1 class="majorBackground">
+  <div class = toplogo style="text-align: center;">
+    <div class="textAndImageContainer">
+      <div class="titleSectionContainer"><div class="GeneratedText">TF2 Item Tracker</div></div>
+    </div>  
+  </div>
+  <!--
+  <div class="chart-container">
+    <canvas bind:this={canvas}></canvas>
+  </div>
+-->
+
   <div id="itemContainer">
     <div id="background">
-      <h1 class="titleContainer">Trending Items</h1>
+      <h1 class="titleContainer">Random Trending Items</h1>
       <div class = "boxRow" id = "trending">
         {#each items as item, index}
         <div class="boxType" id={`boxTrendingID${index + 1}`}>
@@ -362,7 +465,7 @@ function selectItem(item) {
          <img src={item.pictureID} alt={"broke"} /></div>
        <div class="itemBoxName" id={`itemBoxID${index + 1}`}>{item.name}</div>
        <div class="itemBoxPrice" id={`itemPriceID${index + 1}`}>
-        ${item.goingprice.length - 1} 
+        ${item.goingprice[item.goingprice.length - 1]} 
         <span class="percentageChange" 
               style="color: {(((item.goingprice[item.goingprice.length - 1] - item.bought) / item.bought) * 100) > 0 ? 'green' : 'red'};">
           ({(((item.goingprice[item.goingprice.length - 1] - item.bought) / item.bought) * 100).toFixed(2)}%)
@@ -388,8 +491,8 @@ function selectItem(item) {
 
 <Modal bind:showModal>
   <h2 slot="header">
-    Modal
-    <small><em>adjective</em> mod·al \ˈmō-dəl\</small>
+    Track your Item
+    <small>Track any existing genuine tf2 item.</small>
   </h2>
   
   <div>
@@ -432,15 +535,12 @@ function selectItem(item) {
   </form>
   
   <div class="modal-footer">
-    <button class="submit-button" on:click={submitValue}>Submit</button>
-    <button class="close-button" on:click={() => showModal = false}>Close</button>
+    <button class="submit-button" on:click={() => { submitValue(); }}>Submit</button>
   </div>
 
-  <a href="https://www.merriam-webster.com/dictionary/modal" target="_blank">
-    Merriam-Webster: Definition of Modal
+  <a target="_blank">
   </a>
 </Modal>
-
 
 </body>
 
@@ -520,16 +620,42 @@ function selectItem(item) {
   /* Generated Text Styles */
   .GeneratedText {
     font-family: 'Arial Black', sans-serif;
-    font-size: 2em;
+    font-size: 6em; /* Make the text much larger */
     font-stretch: normal;
-    text-decoration: underline;
+    text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    line-height: 1.3em;
-    color: #FFD700;
+    letter-spacing: 0.05em;
+    line-height: 1.1em;
+    color: #ffffff;
     padding: 1.5em;
-    margin: auto;
-  }
+    margin: 0;
+    
+    /* Position it on the left side */
+    left: 0;
+    top: 0;
+    width: 30%; /* Takes up the left side */
+    height: 100%;
+    align-items: center; /* Vertically centers the text */
+    justify-content: flex-start;
+    
+    /* Fancy shadow */
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    
+    /* Border and round corners for extra effect */
+    /* Subtle transition for hover effect */
+    transition: transform 0.3s ease;
+}
+
+.GeneratedText:hover {
+    transform: translateX(10px); /* Slight animation on hover */
+}
+
+.textAndImageContainer {
+    display: flex;
+    align-items: center; /* Vertically center both elements */
+    height: 30vh; /* Full height of the viewport */
+    padding: 20em;
+}
   
   /* Button Styles */
   .add-item-button {
@@ -576,7 +702,7 @@ function selectItem(item) {
     width: 40%;
     margin: 0 auto;
     border-radius: 15px;
-    color: #f2ae31;
+    color: rgb(252, 241, 225);
     border: 10px solid; /* Fallback for browsers that do not support border-image */
     
   }
@@ -630,7 +756,11 @@ function selectItem(item) {
     padding: 20px; /* Padding inside the box */
     font-size: 16px; /* Font size */
     color: #333; /* Text color */
+    overflow-x: auto; /* Prevent horizontal scrolling */
+    scrollbar-width: thin; /* Change scrollbar width */
+    scrollbar-color: #888 #2a475e; /* thumb color and track color */
   }
+  
   
   .boxType {
     background-color: #2a475e; /* Light blue background */
@@ -638,7 +768,8 @@ function selectItem(item) {
     margin: 0 1%; /* 10% offset on both sides */
     padding: 20px; /* Padding inside the box */
     font-size: 16px; /* Font size */
-    color: #c7d5e0; /* Text color */
+    color: #c7d5e0; /* Text color *
+    
   }
   
   .boxType:last-child {
